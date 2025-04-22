@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Patient Form with Flex</title>
+  <link rel="stylesheet" href="style2.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Patient Registration Form</h2>
+
+    <!-- Personal Info -->
+    <div class="box box-personal">
+      <h3>Personal Information</h3>
+      <div class="flex-row">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="number" id="age" name="age" required />
+        </div>
+      </div>
+
+      <div class="flex-row">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Gender</label>
+        <div class="flex-row">
+          <label><input type="radio" name="gender" value="male" /> Male</label>
+          <label><input type="radio" name="gender" value="female" /> Female</label>
+          <label><input type="radio" name="gender" value="other" /> Other</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Medical Info -->
+    <div class="box box-medical">
+      <h3>Medical Information</h3>
+      <div class="form-group">
+        <label>Blood Type</label>
+        <div class="flex-row wrap">
+          <label><input type="radio" name="blood-type" value="A+" /> A+</label>
+          <label><input type="radio" name="blood-type" value="A-" /> A-</label>
+          <label><input type="radio" name="blood-type" value="B+" /> B+</label>
+          <label><input type="radio" name="blood-type" value="B-" /> B-</label>
+          <label><input type="radio" name="blood-type" value="AB+" /> AB+</label>
+          <label><input type="radio" name="blood-type" value="AB-" /> AB-</label>
+          <label><input type="radio" name="blood-type" value="O+" /> O+</label>
+          <label><input type="radio" name="blood-type" value="O-" /> O-</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="history">Medical History</label>
+        <textarea id="history" name="history" rows="4" placeholder="Mention past illnesses, allergies, surgeries, etc."></textarea>
+      </div>
+    </div>
+
+    <!-- Emergency Info -->
+    <div class="box box-emergency">
+      <h3>Emergency Contact</h3>
+      <div class="flex-column">
+        <div class="form-group">
+          <label for="emergency">Contact Number</label>
+          <input type="tel" id="emergency" name="emergency" required />
+        </div>
+        <div class="form-group">
+          <label for="address">Address</label>
+          <textarea id="address" name="address" rows="3" required></textarea>
+        </div>
+      </div>
+    </div>
+
+    <button type="submit">Register</button>
+  </div>
+</body>
+</html>
